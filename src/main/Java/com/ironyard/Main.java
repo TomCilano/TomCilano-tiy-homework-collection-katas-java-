@@ -1,12 +1,18 @@
 package com.ironyard;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Tom on 10/18/16.
  */
 public class Main {
     public static void main (String [] args){
+        //*primitives are passed by value, objects are passed by reference*
+        Flavor.title();
+
+        System.out.println("");
+
         ArrayList<Integer> listOne = new ArrayList<>();
         listOne.add(6);
         listOne.add(2);
@@ -63,21 +69,34 @@ public class Main {
         rotateOne.add(1);
         rotateOne.add(2);
         rotateOne.add(3);
+        Object anPreMethod = rotateOne.clone();
         Kata.rotateLeft(rotateOne);
+        System.out.printf("Kata.RotateLeft3(%s) -> %s",anPreMethod, rotateOne );
+        System.out.println("");
+
 
         ArrayList<Integer> rotateTwo = new ArrayList<>();
         rotateTwo.add(5);
         rotateTwo.add(11);
         rotateTwo.add(9);
+        Object preMethod = rotateTwo.clone();
         Kata.rotateLeft(rotateTwo);
+        System.out.printf("Kata.RotateLeft3(%s) -> %s",preMethod, rotateTwo );
+        System.out.println("");
+
 
         ArrayList<Integer> rotateThree = new ArrayList<>();
         rotateThree.add(0);
         rotateThree.add(0);
         rotateThree.add(7);
+        Object apreMethod =  rotateThree.clone();
         Kata.rotateLeft(rotateThree);
+        System.out.printf("Kata.RotateLeft3(%s) -> %s",apreMethod, rotateThree );
+
 
         System.out.println("");
+        System.out.println("");
+
 
         ArrayList<Integer> reverseOne = new ArrayList<>();
         reverseOne.add(1);
@@ -97,10 +116,44 @@ public class Main {
         reverseThree.add(7);
         Kata.reverse3(reverseThree);
 
+        System.out.println("");
+        System.out.println("");
+
         ArrayList<Integer> ultimateOne = new ArrayList<>();
-        ultimateOne.add(0);
-        ultimateOne.add(0);
+        ultimateOne.add(1);
+        ultimateOne.add(1);
         ultimateOne.add(7);
+        ultimateOne.add(7);
+        Kata.penultimate(ultimateOne);
+
+        ArrayList<Integer> ultimateTwo = new ArrayList<>();
+        ultimateTwo.add(31);
+        ultimateTwo.add(42);
+        ultimateTwo.add(62);
+        ultimateTwo.add(27);
+        Kata.penultimate(ultimateTwo);
+
+        ArrayList<Integer> ultimateThree = new ArrayList<>();
+        ultimateThree.add(1);
+        Kata.penultimate(ultimateThree);
+
+        System.out.println("");
+
+        Flavor.hashmap();
+        System.out.println("");
+
+        HashMap<String, String> bullyOne = new HashMap<>();
+        bullyOne.put("a","Candy");
+        bullyOne.put("b","Dirt");
+        Object original = bullyOne.clone();
+        Kata.mapBully(bullyOne);
+
+        System.out.printf("Kata.RotateLeft3(%s) -> %s",original, bullyOne );
+
+
+
+
+
 
     }
 }
