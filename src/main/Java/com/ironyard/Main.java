@@ -7,10 +7,9 @@ import java.util.HashMap;
  * Created by Tom on 10/18/16.
  */
 public class Main {
-    public static void main (String [] args){
+    public static void main(String[] args) {
         //*primitives are passed by value, objects are passed by reference*
         Flavor.title();
-
         System.out.println("");
 
         ArrayList<Integer> listOne = new ArrayList<>();
@@ -71,7 +70,7 @@ public class Main {
         rotateOne.add(3);
         Object anPreMethod = rotateOne.clone();
         Kata.rotateLeft(rotateOne);
-        System.out.printf("Kata.RotateLeft3(%s) -> %s",anPreMethod, rotateOne );
+        System.out.printf("Kata.RotateLeft3(%s) -> %s", anPreMethod, rotateOne);
         System.out.println("");
 
 
@@ -81,7 +80,7 @@ public class Main {
         rotateTwo.add(9);
         Object preMethod = rotateTwo.clone();
         Kata.rotateLeft(rotateTwo);
-        System.out.printf("Kata.RotateLeft3(%s) -> %s",preMethod, rotateTwo );
+        System.out.printf("Kata.RotateLeft3(%s) -> %s", preMethod, rotateTwo);
         System.out.println("");
 
 
@@ -89,9 +88,9 @@ public class Main {
         rotateThree.add(0);
         rotateThree.add(0);
         rotateThree.add(7);
-        Object apreMethod =  rotateThree.clone();
+        Object apreMethod = rotateThree.clone();
         Kata.rotateLeft(rotateThree);
-        System.out.printf("Kata.RotateLeft3(%s) -> %s",apreMethod, rotateThree );
+        System.out.printf("Kata.RotateLeft3(%s) -> %s", apreMethod, rotateThree);
 
 
         System.out.println("");
@@ -143,17 +142,77 @@ public class Main {
         System.out.println("");
 
         HashMap<String, String> bullyOne = new HashMap<>();
-        bullyOne.put("a","Candy");
-        bullyOne.put("b","Dirt");
-        Object original = bullyOne.clone();
+        bullyOne.put("a", "Candy");
+        bullyOne.put("b", "Dirt");
+        Object originalBullyOne = bullyOne.clone();
         Kata.mapBully(bullyOne);
 
-        System.out.printf("Kata.RotateLeft3(%s) -> %s",original, bullyOne );
+        System.out.printf("Kata.mapBully(%s) -> %s", originalBullyOne, bullyOne);
+        System.out.println("\n");
 
+        HashMap<String, String> shareOne = new HashMap<>();
+        shareOne.put("a", "aaa");
+        shareOne.put("b", "bbb");
+        shareOne.put("c", "ccc");
+        Object originalShareOne = shareOne.clone();
+        Kata.mapShare(shareOne);
+        System.out.printf("Kata.mapShare(%s) -> %s", originalShareOne, shareOne);
+        System.out.println("");
 
+        HashMap<String, String> shareTwo = new HashMap<>();
+        shareTwo.put("d", "aaa");
+        shareTwo.put("b", "bbb");
+        shareTwo.put("c", "ccc");
+        Object originalShareTwo = shareTwo.clone();
+        Kata.mapShare(shareTwo);
+        System.out.printf("Kata.mapShare(%s) -> %s", originalShareTwo, shareTwo);
+        System.out.println("\n");
 
+        HashMap<String, String> abOne = new HashMap<>();
 
+        abOne.put("b", "There");
+        abOne.put("a", "Hi");
+        Object originalABone = abOne.clone();
+        Kata.mapAB(abOne);
+        System.out.printf("Kata.mapAB(%s) -> %s", originalABone, abOne);
+        System.out.println("");
 
+        HashMap<String, String> abTwo = new HashMap<>();
 
+        abTwo.put("a", "Hi");
+        Object originalABtwo = abTwo.clone();
+        Kata.mapAB(abTwo);
+        System.out.printf("Kata.mapAB(%s) -> %s", originalABtwo, abTwo);
+        System.out.println("\n");
+
+        ArrayList<String> aWordLen = new ArrayList<>();
+        aWordLen.add("a");
+        aWordLen.add("bb");
+        aWordLen.add("a");
+        aWordLen.add("bb");
+        Object originalWordLn = aWordLen.clone();
+        HashMap<String, Integer> hashLn1 = Kata.myLen(aWordLen);
+        System.out.printf("Kata.wordLn(%s) -> %s", originalWordLn, hashLn1);
+        System.out.println("");
+
+        ArrayList<String> aWorldLenTwo = new ArrayList<>();
+        aWorldLenTwo.add("this");
+        aWorldLenTwo.add("that");
+        aWorldLenTwo.add("this");
+        aWorldLenTwo.add("that");
+        Object originalWordLn2 = aWorldLenTwo.clone();
+        HashMap<String, Integer> hashLn2 = Kata.myLen(aWorldLenTwo);
+        System.out.printf("Kata.Wordln(%s) -> %s", originalWordLn2, hashLn2);
+        System.out.println("");
+        System.out.println("");
+
+        ArrayList<String>anIndex = new ArrayList<>();
+        anIndex.add("aardvark");
+        anIndex.add("apple");
+        anIndex.add("zamboni");
+        anIndex.add("phone");
+        Object oringinalIndex = anIndex.clone();
+        HashMap<String, String> hasIndex = Kata.myIndex(anIndex);
+        System.out.printf("Kata.anIndex (%s) -> %s", oringinalIndex, hasIndex);
     }
 }

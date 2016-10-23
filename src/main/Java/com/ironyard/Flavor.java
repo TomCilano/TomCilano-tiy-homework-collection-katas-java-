@@ -4,8 +4,11 @@ package com.ironyard;
  * Created by Tom on 10/19/16.
  */
 public class Flavor {
-
-    public static void title(){
+    /**
+     * Prints a totally rad title...
+     * also has the label for the array section
+     */
+    public static void title() {
         System.out.println("   ______        __ __             __   _                       \n" +
                 "  / ____/____   / // /___   _____ / /_ (_)____   ____           \n" +
                 " / /    / __ \\ / // // _ \\ / ___// __// // __ \\ / __ \\          \n" +
@@ -15,13 +18,35 @@ public class Flavor {
                 "        ᴀʀʀᴀʏ ʟɪsᴛs                    / ,<  / __ `// __// __ `/\n" +
                 "        |||||||||||                   / /| |/ /_/ // /_ / /_/ / \n" +
                 "        vvvvvvvvvvv                  /_/ |_|\\__,_/ \\__/ \\__,_/  \n" +
-                "                                                                \n");
+                "                                                                 \n");
     }
 
-
-    public static void hashmap(){
+    /**
+     * hashmap label
+     */
+    public static void hashmap() {
         System.out.println("ʜᴀsʜᴍᴀᴘs");
         System.out.println("||||||||");
         System.out.println("vvvvvvvv");
+    }
+
+    /**
+     * prints a good bye
+     */
+    public static void bye() {
+        System.out.println("\n" +
+                "\n");
+        System.out.println("  Goodbye");
+        System.out.println("\n" +
+                "│▒│ /▒/\n" +
+                "│▒│/▒/\n" +
+                "│▒ /▒/─┬─┐\n" +
+                "│▒│▒|▒│▒│\n" +
+                "┌┴─┴─┐-┘─┘ \n" +
+                "│▒┌──┘▒▒▒│\n" +
+                "└┐▒▒▒▒▒▒┌┘\n" +
+                "└┐▒▒▒▒┌┘\n");
+        System.out.println("Tom Cilano");
+
     }
 }
