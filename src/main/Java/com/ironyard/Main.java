@@ -2,6 +2,7 @@ package com.ironyard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Tom on 10/18/16.
@@ -212,7 +213,7 @@ public class Main {
         anIndex.add("zamboni");
         anIndex.add("phone");
         Object oringinalIndex = anIndex.clone();
-        HashMap<String, String> hasIndex = Kata.myIndex(anIndex);
+        HashMap<String, List> hasIndex = Kata.myIndex(anIndex);
         System.out.printf("Kata.anIndex (%s) -> %s", oringinalIndex, hasIndex);
     }
 }

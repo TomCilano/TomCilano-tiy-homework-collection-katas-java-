@@ -163,15 +163,24 @@ public class Kata {
      * @param anIndex
      * @return
      */
-    public static HashMap<String, String> myIndex(ArrayList<String> anIndex) {
-        HashMap<String, String> indexHashMap = new HashMap<>();
+    public static HashMap<String, List> myIndex(ArrayList<String> anIndex) {
+        HashMap<String, List> indexHashMap = new HashMap<>();
 
 
         Iterator<String> iterator = anIndex.iterator();
         while (iterator.hasNext()) {
             String x = iterator.next();
-            indexHashMap.put(x.substring(0,1),x);
-        //ugggghhh
+
+            String firstChar = x.substring(0,1);
+            List<String> newList = null;
+            newList = indexHashMap.get(firstChar);
+            if (newList == null){
+                newList = new ArrayList<>();
+            }
+            newList.add(x);
+
+             indexHashMap.put(firstChar,newList);
+
 
         }
         return indexHashMap;
